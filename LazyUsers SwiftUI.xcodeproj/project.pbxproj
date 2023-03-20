@@ -13,6 +13,15 @@
 		EF75FA2529C8BE2600846944 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA2429C8BE2600846944 /* ContentView.swift */; };
 		EF75FA2729C8BE2800846944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF75FA2629C8BE2800846944 /* Assets.xcassets */; };
 		EF75FA2B29C8BE2800846944 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF75FA2A29C8BE2800846944 /* Preview Assets.xcassets */; };
+		EF75FA3229C8C00000846944 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3129C8C00000846944 /* HomeView.swift */; };
+		EF75FA3429C8C01200846944 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3329C8C01200846944 /* HomeViewModel.swift */; };
+		EF75FA3629C8C03400846944 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3529C8C03400846944 /* FavoritesView.swift */; };
+		EF75FA3829C8C04500846944 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3729C8C04500846944 /* FavoritesViewModel.swift */; };
+		EF75FA3A29C8C0BB00846944 /* UserRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3929C8C0BB00846944 /* UserRepoListView.swift */; };
+		EF75FA3C29C8C0CB00846944 /* UserRepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3B29C8C0CB00846944 /* UserRepoListViewModel.swift */; };
+		EF75FA3E29C8C20B00846944 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA3D29C8C20B00846944 /* User.swift */; };
+		EF75FA6229C8FDCA00846944 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA6129C8FDCA00846944 /* ApiService.swift */; };
+		EF75FA6429C90F2400846944 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75FA6329C90F2400846944 /* Repo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,16 @@
 		EF75FA2629C8BE2800846944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF75FA2829C8BE2800846944 /* LazyUsers_SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyUsers_SwiftUI.entitlements; sourceTree = "<group>"; };
 		EF75FA2A29C8BE2800846944 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF75FA3129C8C00000846944 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF75FA3329C8C01200846944 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EF75FA3529C8C03400846944 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		EF75FA3729C8C04500846944 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		EF75FA3929C8C0BB00846944 /* UserRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoListView.swift; sourceTree = "<group>"; };
+		EF75FA3B29C8C0CB00846944 /* UserRepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoListViewModel.swift; sourceTree = "<group>"; };
+		EF75FA3D29C8C20B00846944 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF75FA6029C8E4B800846944 /* LazyUsers-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LazyUsers-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EF75FA6129C8FDCA00846944 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		EF75FA6329C90F2400846944 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +75,19 @@
 		EF75FA1C29C8BE2600846944 /* LazyUsers SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EF75FA6029C8E4B800846944 /* LazyUsers-SwiftUI-Info.plist */,
 				EF75FA1D29C8BE2600846944 /* LazyUsers_SwiftUIApp.swift */,
 				EF75FA1F29C8BE2600846944 /* Persistence.swift */,
+				EF75FA6129C8FDCA00846944 /* ApiService.swift */,
 				EF75FA2429C8BE2600846944 /* ContentView.swift */,
+				EF75FA3D29C8C20B00846944 /* User.swift */,
+				EF75FA6329C90F2400846944 /* Repo.swift */,
+				EF75FA3129C8C00000846944 /* HomeView.swift */,
+				EF75FA3329C8C01200846944 /* HomeViewModel.swift */,
+				EF75FA3529C8C03400846944 /* FavoritesView.swift */,
+				EF75FA3729C8C04500846944 /* FavoritesViewModel.swift */,
+				EF75FA3929C8C0BB00846944 /* UserRepoListView.swift */,
+				EF75FA3B29C8C0CB00846944 /* UserRepoListViewModel.swift */,
 				EF75FA2629C8BE2800846944 /* Assets.xcassets */,
 				EF75FA2829C8BE2800846944 /* LazyUsers_SwiftUI.entitlements */,
 				EF75FA2129C8BE2600846944 /* LazyUsers_SwiftUI.xcdatamodeld */,
@@ -146,9 +175,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF75FA2329C8BE2600846944 /* LazyUsers_SwiftUI.xcdatamodeld in Sources */,
+				EF75FA6429C90F2400846944 /* Repo.swift in Sources */,
+				EF75FA3429C8C01200846944 /* HomeViewModel.swift in Sources */,
+				EF75FA3829C8C04500846944 /* FavoritesViewModel.swift in Sources */,
 				EF75FA1E29C8BE2600846944 /* LazyUsers_SwiftUIApp.swift in Sources */,
+				EF75FA3A29C8C0BB00846944 /* UserRepoListView.swift in Sources */,
 				EF75FA2529C8BE2600846944 /* ContentView.swift in Sources */,
+				EF75FA3629C8C03400846944 /* FavoritesView.swift in Sources */,
+				EF75FA3C29C8C0CB00846944 /* UserRepoListViewModel.swift in Sources */,
+				EF75FA3229C8C00000846944 /* HomeView.swift in Sources */,
 				EF75FA2029C8BE2600846944 /* Persistence.swift in Sources */,
+				EF75FA6229C8FDCA00846944 /* ApiService.swift in Sources */,
+				EF75FA3E29C8C20B00846944 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +315,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LazyUsers-SwiftUI-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -315,6 +354,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LazyUsers-SwiftUI-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
