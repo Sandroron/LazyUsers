@@ -9,12 +9,20 @@ import SwiftUI
 
 @main
 struct LazyUsers_SwiftUIApp: App {
-//    let persistenceController = PersistenceController.shared
+    let persistanceController = PersistenceController.shared
+    
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistanceController.container.viewContext)
         }
+        .onChange(of: scenePhase, perform: { newScenePhase in
+            
+            if case .background = newScenePhase {
+                persistanceController.save()
+            }
+        })
     }
 }

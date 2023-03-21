@@ -1,14 +1,13 @@
 //
-//  User.swift
+//  FavoritesViewModel.swift
 //  LazyUsers SwiftUI
 //
 //  Created by CT Razumnyi on 20.03.2023.
 //
 
 import Foundation
+import CoreData
 
-struct User: Identifiable, Decodable {
+class FavoritesViewModel: ObservableObject {
     
-    var id: Int
-    var login: String
 }
