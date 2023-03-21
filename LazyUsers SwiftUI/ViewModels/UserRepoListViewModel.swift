@@ -21,6 +21,11 @@ class UserRepoListViewModel: ObservableObject {
         self.user = user
     }
     
+    convenience init(favoriteUser: FavoriteUser) {
+        let user = User(id: Int(favoriteUser.id), login: favoriteUser.login ?? "Unknown user")
+        self.init(user: user)
+    }
+    
     @MainActor
     func fetchRepos() async {
         defer { isLoading = false }

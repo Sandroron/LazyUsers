@@ -9,20 +9,19 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var managedObjectContext
-
+    
+    let favoritesViewModel = FavoritesViewModel()
+    
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(favoritesViewModel: favoritesViewModel)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-                .environment(\.managedObjectContext, managedObjectContext)
-            FavoritesView()
+            FavoritesView(favoritesViewModel: favoritesViewModel)
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
                 }
-                .environment(\.managedObjectContext, managedObjectContext)
         }
     }
 }

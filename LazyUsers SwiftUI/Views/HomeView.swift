@@ -6,17 +6,11 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct HomeView: View {
     
     @StateObject private var homeViewModel = HomeViewModel()
-    
-    @Environment(\.managedObjectContext) private var managedObjectContext
-    
-    @FetchRequest(entity: FavoriteUser.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \FavoriteUser.login, ascending: true)])
-    private var favoriteUsers: FetchedResults<FavoriteUser>
+    @StateObject var favoritesViewModel: FavoritesViewModel
     
     var body: some View {
         
@@ -42,10 +36,10 @@ struct HomeView: View {
                                                     .padding()
                                                 Spacer()
                                                 
-                                                if let index = favoriteUsers.firstIndex(where: {$0.login == user.login}) {
+                                                if let index = favoritesViewModel.favoriteUsers.firstIndex(where: {$0.login == user.login}) {
                                                     
                                                     Button(action: {
-                                                        delete(at: index)
+                                                        favoritesViewModel.deleteFavoriteUser(at: index)
                                                     }) {
                                                         Image(systemName: "heart.fill")
                                                             .font(.title)
@@ -55,7 +49,7 @@ struct HomeView: View {
                                                 } else {
                                                     
                                                     Button(action: {
-                                                        save(user: user)
+                                                        favoritesViewModel.saveFavoriteUser(user: user)
                                                     }) {
                                                         Image(systemName: "heart")
                                                             .font(.title)
@@ -95,16 +89,6 @@ struct HomeView: View {
                 }
             }
         }
-    }
-    
-    func save(user: User) {
-        let _ = user.getFavoriteUser(from: managedObjectContext)
-        PersistenceController.shared.save()
-    }
-    
-    func delete(at index: IndexSet.Element) {
-        let favoriteUser = favoriteUsers[index]
-        PersistenceController.shared.delete(favoriteUser)
     }
 }
 

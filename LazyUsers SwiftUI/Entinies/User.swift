@@ -13,7 +13,8 @@ struct User: Identifiable, Decodable {
     var id: Int
     var login: String
     
-    func getFavoriteUser(from context: NSManagedObjectContext) -> FavoriteUser {
+    @discardableResult
+    func createFavoriteUser(from context: NSManagedObjectContext) -> FavoriteUser {
         
         let favoriteUser = FavoriteUser(context: context)
         favoriteUser.login = login
