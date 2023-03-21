@@ -24,7 +24,7 @@ struct UserRepoListView: View {
                     
                     ScrollView {
                         LazyVStack(alignment: .leading, spacing: 0) {
-                            ForEach(userRepoListViewModel.repos ?? []) { repo in
+                            ForEach(repos) { repo in
                                 VStack(alignment: .leading, spacing: 0) {
                                     Text("\(repo.name)")
                                         .foregroundColor(.primary)
